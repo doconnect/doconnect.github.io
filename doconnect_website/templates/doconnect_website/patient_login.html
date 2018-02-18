@@ -1,0 +1,43 @@
+<html>
+    <head>
+        {% load staticfiles %}
+        <title>DoConnect - Patient Login</title>
+        <script src="jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="{% static 'scripts/script.js'%}"></script>
+        <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+        {% block stylesheet %}{% endblock %}
+    </head>
+        <body>
+            {% load staticfiles %}
+            <header>
+                <div class="row">
+                    <div class="logo">
+                        <img src="{% static 'pics/logo.png' %}">
+                    </div>
+                    <ul class="main-nav">
+                        <li class="active"><a href=""> HOME </a></li>
+                        <li><a href=""> CONTACT </a></li>
+                        <li><a href=""> ABOUT </a></li>
+                    </ul>
+                </div>
+      
+            </header>
+                      <div class="container">
+                          <img src="{% static 'pics/userlogin.png' %}">
+                          <h2>Patient Login</h2>
+                    <form>
+                        <div class="form-input">
+                            <input id='id_username' type="text" name="username" placeholder="Enter Username">
+                        </div>
+                        <div class="form-input">
+                            <input id='id_password' type="password" name="password" placeholder="Enter Password">
+                        </div>
+                        <div class="button4">
+                            <a href="{% url 'patient_login' %}" class="btn2 btn-two"> Login </a>
+                        </div>
+                        <!--<input href="{% url 'doctor' %}" type="submit" name="submit" value="LOGIN" class="btn-login"><br>
+                        <a href="#">Forget password?</a>-->
+                    </form>
+                </div>
+        </body>
+</html> 
